@@ -1,0 +1,23 @@
+<app-banner [heading1]="homeOffersHeading1" [heading2]="homeOffersHeading2" [heading3]="homeOffersHeading3"></app-banner>
+<div class="home">
+    <div class="author">
+        <button mat-raised-button color="accent" (click)="getData()">Pobierz dane o Autorze</button>
+        <div class="author-line-details">
+            <span class="author-details-head">Imię:</span>
+            <span class="author-details-data">{{ data ? data.firstName : data}}</span>
+        </div>
+        <div class="author-line-details">
+            <span class="author-details-head">Nazwisko:</span>
+            <span class="author-details-data">{{ data ? data.lastName : data}}</span>
+        </div>
+        <div class="author-line-details">
+            <span class="author-details-head">Grupa:</span>
+            <span class="author-details-data">{{ data ? data.group : data}}</span>
+        </div>
+        <div class="author-line-details">
+            <span class="author-details-head">Numer Indeksu:</span>
+            <span class="author-details-data">{{ data ? data.indexNumber : data}}</span>
+        </div>    
+    </div>
+    
+</div>

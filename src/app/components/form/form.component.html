@@ -1,0 +1,46 @@
+<div class="form">
+  <form class="form" [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+        <mat-label>Imię</mat-label>
+        <input matInput type="text" formControlName="firstName">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Nazwisko</mat-label>
+        <input matInput type="text" formControlName="lastName">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Numer Telefonu</mat-label>
+        <span matPrefix>+48 &nbsp;</span>
+        <input type="tel" matInput placeholder="555-555-1234" type="text" formControlName="phone">
+        <mat-icon matSuffix>mode_edit</mat-icon>
+    </mat-form-field>
+
+    <div>
+        <label>Płeć: </label>
+        <mat-radio-group formControlName="gender">
+          <mat-radio-button value="male">Mężczyzna</mat-radio-button>
+          <mat-radio-button value="female">Kobieta</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Wybierz preferowaną formę rekrutacji</mat-label>
+        <mat-select type="text" formControlName="formOfRecrutation">
+          <mat-option value="tel">Rozmowa telefoniczna</mat-option>
+          <mat-option value="teams">Spotkanie Teams</mat-option>
+          <mat-option value="face">Spotkanie osobiste</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Dodatkowe informacje</mat-label>
+        <textarea matInput type="text" formControlName="extraInfo"></textarea>
+    </mat-form-field>
+
+    <mat-checkbox type="boolean" formControlName="accept" required>Akceptuję regulamin</mat-checkbox>
+
+    <button type="submit" mat-raised-button color="primary">Wyślij</button>
+  </form>
+</div>

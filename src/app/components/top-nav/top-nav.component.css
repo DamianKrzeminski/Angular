@@ -1,0 +1,27 @@
+.top-nav{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(119, 171, 250);
+}
+
+.first-nav{
+    display: flex;
+    justify-content: center;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 40%;
+}
+
+.second-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link{
+    text-decoration: none;
+}

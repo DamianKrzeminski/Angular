@@ -1,0 +1,30 @@
+<div class="top-nav">
+  <div class="first-nav">
+    <div class="nav">
+      <a class="link" routerLink="home">
+        <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+          <mat-icon>home</mat-icon>
+        </button>
+      </a>
+      <a class="link" routerLink="itOffers">
+        <button mat-raised-button color="primary">
+          Praca IT
+        </button>
+      </a>
+      <a class="link" routerLink="engineerOffers">
+        <button mat-raised-button color="primary">
+          Praca Inżynieria
+        </button>
+      </a>
+      <a class="link" routerLink="managementOffers">
+        <button mat-raised-button color="primary">
+          Praca Zarządzanie
+        </button>
+      </a>
+      <button type="button" mat-raised-button color="primary" (click)="toggle()">Ustawienia</button>
+    </div>
+  </div>
+  <div [@showSecondNav]="isShow ? 'show' : 'hide'" class="second-nav">
+    <button [ngStyle]="{'display': displayButton}" type="button" mat-raised-button color="primary" (click)="setColor(backgroundColor)">Zmień kolor</button>
+  </div>
+</div>
